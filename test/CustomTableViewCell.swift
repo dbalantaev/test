@@ -24,23 +24,39 @@ class CustomTableViewCell: UITableViewCell {
         return ageTextField
     }()
     
-    let delete: UIButton = {
+     let delete: UIButton = {
         let dlt = UIButton(type: .system)
         dlt.setTitle("Удалить", for: .normal)
         dlt.setTitleColor(UIColor(red: 57/255, green: 171/255, blue: 251/255, alpha: 1), for: .normal)
         return dlt
     }()
     
+   
+    
+//
+//    let resetData: UIButton = {
+//        let clean = UIButton(type: .system)
+//        clean.setTitle("Очистить", for: .normal)
+//        clean.setTitleColor(UIColor(red: 216/255, green: 63/255, blue: 42/255, alpha: 1), for: .normal)
+//        clean.layer.cornerRadius = 25
+//        clean.layer.borderWidth = 2
+//        clean.layer.borderColor = CGColor(red: 216/255, green: 63/255, blue: 42/255, alpha: 1)
+//        return clean
+//    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(NameTF)
         NameTF.snp.makeConstraints { make in
+//            make.left.right.equalToSuperview().inset(180)
+            make.left.equalToSuperview().inset(20)
             make.height.equalTo(60)
             make.width.equalTo(200)
         }
         contentView.addSubview(AgeTF)
         AgeTF.snp.makeConstraints { make in
             make.top.equalTo(NameTF.snp.bottom).offset(20)
+            make.left.equalToSuperview().inset(20)
             make.height.equalTo(60)
             make.width.equalTo(200)
         }
@@ -51,16 +67,30 @@ class CustomTableViewCell: UITableViewCell {
             make.width.equalTo(100)
             make.height.equalTo(60)
         }
-        delete.addTarget(self, action: #selector(Delete), for: .touchUpInside)
+        delete.addTarget(self, action: #selector(DeleteRow), for: .touchUpInside)
+//        contentView.addSubview(resetData)
+//        resetData.snp.makeConstraints { make in
+//            make.bottom.equalTo(10)
+//            make.centerX.equalToSuperview()
+////            make.top.equalTo(AgeTF.snp.bottom).offset(20)
+//            make.width.equalTo(220)
+//            make.height.equalTo(50)
+//        }
+        
     }
     
-    @objc private func Delete() {
-        print("777")
-//        self.tableView.deleteRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .left)
+    @objc private func DeleteRow(sender: UIButton) {
+        
+        
+        print("delete")
     }
+    
+
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
 }
+
+
