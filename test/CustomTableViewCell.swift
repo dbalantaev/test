@@ -52,15 +52,11 @@ class CustomTableViewCell: UITableViewCell {
             make.width.equalTo(100)
             make.height.equalTo(60)
         }
-        
     }
-    
-
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
 }
 
 

@@ -12,7 +12,6 @@
 		DE7658E227CBBB9000BFEA45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7658E127CBBB9000BFEA45 /* ViewController.swift */; };
 		DEED4C7A27C09AF40030AAA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEED4C7927C09AF40030AAA2 /* AppDelegate.swift */; };
 		DEED4C7C27C09AF40030AAA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEED4C7B27C09AF40030AAA2 /* SceneDelegate.swift */; };
-		DEED4C7E27C09AF40030AAA2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEED4C7D27C09AF40030AAA2 /* TableViewController.swift */; };
 		DEED4C8127C09AF40030AAA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEED4C7F27C09AF40030AAA2 /* Main.storyboard */; };
 		DEED4C8327C09AF70030AAA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEED4C8227C09AF70030AAA2 /* Assets.xcassets */; };
 		DEED4C8627C09AF70030AAA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEED4C8427C09AF70030AAA2 /* LaunchScreen.storyboard */; };
@@ -27,7 +26,6 @@
 		DEED4C7627C09AF40030AAA2 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEED4C7927C09AF40030AAA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEED4C7B27C09AF40030AAA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DEED4C7D27C09AF40030AAA2 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		DEED4C8027C09AF40030AAA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DEED4C8227C09AF70030AAA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEED4C8527C09AF70030AAA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -86,7 +84,6 @@
 			children = (
 				DEED4C7927C09AF40030AAA2 /* AppDelegate.swift */,
 				DEED4C7B27C09AF40030AAA2 /* SceneDelegate.swift */,
-				DEED4C7D27C09AF40030AAA2 /* TableViewController.swift */,
 				DE7658DD27C5163900BFEA45 /* CustomTableViewCell.swift */,
 				DE7658E127CBBB9000BFEA45 /* ViewController.swift */,
 				DEED4C7F27C09AF40030AAA2 /* Main.storyboard */,
@@ -212,7 +209,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEED4C7E27C09AF40030AAA2 /* TableViewController.swift in Sources */,
 				DE7658E227CBBB9000BFEA45 /* ViewController.swift in Sources */,
 				DE7658DE27C5163900BFEA45 /* CustomTableViewCell.swift in Sources */,
 				DEED4C7A27C09AF40030AAA2 /* AppDelegate.swift in Sources */,
@@ -366,7 +362,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YC264A289X;
+				DEVELOPMENT_TEAM = 2SHFKNC62G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = test/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -397,7 +393,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YC264A289X;
+				DEVELOPMENT_TEAM = 2SHFKNC62G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = test/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
