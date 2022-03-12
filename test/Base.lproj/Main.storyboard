@@ -15,13 +15,162 @@
                     <view key="view" contentMode="scaleToFill" id="Khq-g8-qYG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Персональные данные" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bo4-qt-ihm">
+                                <rect key="frame" x="16" y="64" width="211" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7TA-6g-KDs">
+                                <rect key="frame" x="20" y="114" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="3L0-LD-jp4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Возраст" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QOm-9n-ihS">
+                                <rect key="frame" x="20" y="199" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="6a5-FK-8xR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pou-sK-men">
+                                <rect key="frame" x="97" y="792" width="220" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="u0A-Z4-436"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Очистить"/>
+                                <connections>
+                                    <action selector="cleanAllClick:" destination="vh9-eq-2Y7" eventType="touchUpInside" id="gIb-50-4JG"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FzD-Qm-pow">
+                                <rect key="frame" x="0.0" y="312" width="414" height="472"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomTableViewCell" rowHeight="150" id="a7Z-OX-KHK" customClass="CustomTableViewCell" customModule="test" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a7Z-OX-KHK" id="Scx-ut-SnT">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t7U-pL-QPl">
+                                                    <rect key="frame" x="20" y="11" width="200" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="Rhf-hJ-zPm"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="nameTF:" destination="WPD-VW-zUU" eventType="editingDidEnd" id="vEq-z7-0Id"/>
+                                                    </connections>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJs-Lc-Xbf">
+                                                    <rect key="frame" x="315" y="29" width="79" height="31"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Удалить"/>
+                                                    <connections>
+                                                        <action selector="deleteRowBtn:" destination="WPD-VW-zUU" eventType="touchUpInside" id="nNx-VQ-0J7"/>
+                                                        <action selector="deleteRowClick:" destination="vh9-eq-2Y7" eventType="touchUpInside" id="6iK-BY-2oe"/>
+                                                    </connections>
+                                                </button>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Возраст" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iaS-JD-lgZ">
+                                                    <rect key="frame" x="20" y="79" width="200" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="8BA-nH-pyL"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="ageTF:" destination="WPD-VW-zUU" eventType="editingDidEnd" id="UHN-0Q-M1l"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="iaS-JD-lgZ" firstAttribute="bottom" secondItem="Scx-ut-SnT" secondAttribute="bottomMargin" id="6jx-W4-5Ld"/>
+                                                <constraint firstItem="iaS-JD-lgZ" firstAttribute="top" secondItem="t7U-pL-QPl" secondAttribute="bottom" constant="8" symbolic="YES" id="CmC-Gd-Lyu"/>
+                                                <constraint firstItem="iaS-JD-lgZ" firstAttribute="leading" secondItem="Scx-ut-SnT" secondAttribute="leadingMargin" id="ahk-Ug-3Gv"/>
+                                                <constraint firstItem="HJs-Lc-Xbf" firstAttribute="trailing" secondItem="Scx-ut-SnT" secondAttribute="trailingMargin" id="jqz-X1-YZc"/>
+                                                <constraint firstItem="HJs-Lc-Xbf" firstAttribute="top" secondItem="Scx-ut-SnT" secondAttribute="topMargin" constant="18" id="pwx-vq-Zo0"/>
+                                                <constraint firstItem="t7U-pL-QPl" firstAttribute="top" secondItem="Scx-ut-SnT" secondAttribute="topMargin" id="w9s-Ng-7m2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="t7U-pL-QPl" secondAttribute="trailing" constant="174" id="wvH-cp-uPG"/>
+                                                <constraint firstItem="t7U-pL-QPl" firstAttribute="leading" secondItem="Scx-ut-SnT" secondAttribute="leadingMargin" id="zCE-SD-Pcl"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="iaS-JD-lgZ" secondAttribute="trailing" constant="174" id="zxc-Nq-ya0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ageTF" destination="iaS-JD-lgZ" id="cTf-IP-6YU"/>
+                                            <outlet property="deleteRowBtn" destination="HJs-Lc-Xbf" id="I0D-Xa-I9J"/>
+                                            <outlet property="nameTF" destination="t7U-pL-QPl" id="fyS-n6-Bt4"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vh9-eq-2Y7" id="Cuu-YP-nPu"/>
+                                    <outlet property="delegate" destination="vh9-eq-2Y7" id="3f8-q1-2Ie"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дети (Макс. 5)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xt-k3-2Ax">
+                                <rect key="frame" x="20" y="280" width="133.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crF-Iu-GaR">
+                                <rect key="frame" x="161.5" y="267" width="236.5" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="76o-dD-0ac"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+ Добавить ребенка"/>
+                                <connections>
+                                    <action selector="addRowClick:" destination="vh9-eq-2Y7" eventType="touchUpInside" id="iFR-UI-UYf"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="U2i-cH-deL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="crF-Iu-GaR" firstAttribute="top" secondItem="QOm-9n-ihS" secondAttribute="bottom" constant="8" symbolic="YES" id="0pr-T1-peC"/>
+                            <constraint firstItem="FzD-Qm-pow" firstAttribute="leading" secondItem="U2i-cH-deL" secondAttribute="leading" id="56c-Il-her"/>
+                            <constraint firstItem="FzD-Qm-pow" firstAttribute="trailing" secondItem="U2i-cH-deL" secondAttribute="trailing" id="6UZ-AN-0bC"/>
+                            <constraint firstItem="QOm-9n-ihS" firstAttribute="leading" secondItem="U2i-cH-deL" secondAttribute="leading" constant="20" id="74P-dh-BTI"/>
+                            <constraint firstItem="U2i-cH-deL" firstAttribute="trailing" secondItem="QOm-9n-ihS" secondAttribute="trailing" constant="20" id="JX8-EP-Rjm"/>
+                            <constraint firstItem="U2i-cH-deL" firstAttribute="trailing" secondItem="7TA-6g-KDs" secondAttribute="trailing" constant="20" id="JYd-sP-quJ"/>
+                            <constraint firstItem="FzD-Qm-pow" firstAttribute="top" secondItem="0xt-k3-2Ax" secondAttribute="bottom" constant="8" symbolic="YES" id="M6a-Iz-x5u"/>
+                            <constraint firstItem="7TA-6g-KDs" firstAttribute="leading" secondItem="U2i-cH-deL" secondAttribute="leading" constant="20" id="PgN-0T-8dj"/>
+                            <constraint firstItem="0xt-k3-2Ax" firstAttribute="leading" secondItem="U2i-cH-deL" secondAttribute="leading" constant="20" id="RAC-94-jug"/>
+                            <constraint firstItem="0xt-k3-2Ax" firstAttribute="top" secondItem="QOm-9n-ihS" secondAttribute="bottom" constant="21" id="W44-JP-hx6"/>
+                            <constraint firstItem="U2i-cH-deL" firstAttribute="trailing" secondItem="Pou-sK-men" secondAttribute="trailing" constant="97" id="XGA-UW-6GK"/>
+                            <constraint firstItem="Pou-sK-men" firstAttribute="top" secondItem="FzD-Qm-pow" secondAttribute="bottom" constant="8" symbolic="YES" id="YaG-RL-Nbt"/>
+                            <constraint firstItem="bo4-qt-ihm" firstAttribute="leading" secondItem="U2i-cH-deL" secondAttribute="leading" constant="16" id="b8E-5H-aVl"/>
+                            <constraint firstItem="QOm-9n-ihS" firstAttribute="top" secondItem="7TA-6g-KDs" secondAttribute="bottom" constant="25" id="bh1-WU-uNB"/>
+                            <constraint firstItem="Pou-sK-men" firstAttribute="leading" secondItem="U2i-cH-deL" secondAttribute="leading" constant="97" id="fCn-UC-Kar"/>
+                            <constraint firstItem="U2i-cH-deL" firstAttribute="trailing" secondItem="crF-Iu-GaR" secondAttribute="trailing" constant="16" id="haY-NG-yga"/>
+                            <constraint firstItem="7TA-6g-KDs" firstAttribute="top" secondItem="bo4-qt-ihm" secondAttribute="bottom" constant="26" id="rmm-5r-Wu6"/>
+                            <constraint firstItem="crF-Iu-GaR" firstAttribute="leading" secondItem="0xt-k3-2Ax" secondAttribute="trailing" constant="8" symbolic="YES" id="xgP-H3-XY2"/>
+                            <constraint firstItem="bo4-qt-ihm" firstAttribute="top" secondItem="U2i-cH-deL" secondAttribute="top" constant="20" id="z9D-Vs-pPL"/>
+                            <constraint firstItem="U2i-cH-deL" firstAttribute="bottom" secondItem="Pou-sK-men" secondAttribute="bottom" constant="20" id="zsV-mZ-yek"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addRowBtn" destination="crF-Iu-GaR" id="ieB-WD-K4t"/>
+                        <outlet property="ageTextField" destination="QOm-9n-ihS" id="Gfr-5j-2z6"/>
+                        <outlet property="cleanAllBtn" destination="Pou-sK-men" id="dLQ-nN-ujF"/>
+                        <outlet property="nameTextField" destination="7TA-6g-KDs" id="nd3-3X-G7L"/>
+                        <outlet property="tableView" destination="FzD-Qm-pow" id="lj9-Bm-2an"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AZf-as-WI4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="WPD-VW-zUU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1842.0289855072465" y="-755.35714285714278"/>
+            <point key="canvasLocation" x="-1842.4000000000001" y="-756.07196401799104"/>
         </scene>
     </scenes>
     <resources>
